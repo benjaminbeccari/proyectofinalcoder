@@ -1,0 +1,298 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Monserrat', sans-serif;
+}
+
+// VARIABLES
+$primario: #363636;
+$secundario: #ba9979;
+$text: #ffffff;
+
+// NAVBAR
+.navbar{
+    .container-fluid{
+        .navbar-brand{
+            img{
+                width: 50px;
+            }
+        }
+        .collapse{
+            .navbar-nav{
+                .dropdown{
+                    .dropdown-menu{
+                        background: $secundario;
+                    }
+                    .dropdown-item{
+                        color: $text;
+                    }
+                    .dropdown-item:hover{
+                        background: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// NOSOTROS
+// NOSOTROS FLEX & STYLES
+.nosotros{
+    display: flex;
+    justify-content: center;
+    background: $primario;
+    color: $text;
+    padding-top: 45px;
+    height: 550px;
+    .nosotros--text--social{
+        ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            list-style-type: none;
+            padding: 0;
+            
+            li{
+                list-style-type: none;
+                padding: 0;
+                a{
+                    padding: 25px;
+                    i{
+                        font-size: 25px;
+                        color: $secundario;
+                    }
+                }
+            }
+        }
+    }
+    .nosotros--img{
+        img{
+            border-radius: 40% 10% 0 0;
+            width: 450px;
+            height: 500px;
+        }
+    }
+}
+// NOSOTROS GRID
+.nosotros{
+    display: grid;
+    grid-template-columns: 500px 500px;
+    grid-template-rows: 500px;
+}
+
+// FORMULARIO
+// FORMULARIO FLEX & STYLES
+.newsleter{
+    display: flex;
+    justify-content: center;
+    padding-top: 45px;
+    height: 300px;
+    background: #1e101e;
+    color: $secundario;
+    .newsleter--form{
+        form{
+            display: flex;
+            flex-direction: column;
+            input{
+                background: none;
+                border: none;
+                margin-bottom: 15px;
+            }
+            input[type=text]:focus{
+                outline: none;
+                background: #ba9979;
+                color: $text;
+            }
+            input[type=email]:focus{
+                outline: none;
+                background: #ba9979;
+                color: $text;
+            }
+            input[type=submit]{
+                background: #ba9979;
+                color: $text;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+// FORMULARIO GRID
+.newsleter{
+    display: grid;
+    grid-template-columns: 500px 500px;
+    grid-template-rows: 300px;
+}
+
+// FOOTER
+// FOOTER FLEX STYLES
+footer{
+    display: flex;
+    justify-content: center;
+    background: #363636;
+    .footer--item{
+        .footer--brand{
+            .footer--brand--img{
+                display: flex;
+                justify-content: center;
+                padding-bottom: 10px;
+                img{
+                    width: 50px;
+                }
+            }
+            .footer--brand--social{
+                ul{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    padding: 0;
+                    li{
+                        list-style-type: none;
+                        padding: 0;
+                        a{
+                            i{
+                                color: $secundario;
+                                font-size: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .footer--item--navegacion{
+            h4{
+                color: $text;
+            }
+            .sitio--list{
+                ul{
+                    list-style-type: none;
+                    padding: 0;
+                    li{
+                        list-style-type: none;
+                        a{
+                            text-decoration: none;
+                            color: $secundario;
+                        }
+                    }
+                }
+            }
+        }
+        .footer--item--contacto{
+            h4{
+                color: $text;
+            }
+            .contacto--list{
+                ul{
+                    list-style-type: none;
+                    padding: 0;
+                    li{
+                        list-style-type: none;
+                        padding: 0;
+                        a{
+                            text-decoration: none;
+                            color: $secundario;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// FOOTER GRID
+footer{
+    display: grid;
+    grid-template-columns: 300px 200px 300px;
+    grid-template-rows: 200px;
+}
+
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Smal devices (landscape phones, 576px and p)
+@media (max-width: 576px) {
+    // NOSOTROS
+    // NOSOTROS FLEX & STYLES
+    .nosotros{
+        .nosotros--text{
+            .nosotros--text--social{
+                display: flex;
+                justify-content: center;
+                
+            }
+        }
+        height: 750px;
+        .nosotros--img{
+            img{
+
+                width: 300px;
+                height: 400px;
+            }
+        }
+    }
+    // NOSOTROS GRID
+    .nosotros{
+        display: grid;
+        grid-template-columns: 300px;
+        grid-template-rows: 300px 450px;
+    }
+    // FORMULARIO FLEX & STYLES
+    .newsleter{
+        height: 410px;
+    }
+    // FORMULARIO GRID
+    .newsleter{
+        display: grid;
+        grid-template-columns: 300px;
+        grid-template-rows: 150px 300px;
+    }
+    // FOOTER GRID
+    footer{
+        display: grid;
+        grid-template-columns: 300px;
+        grid-template-rows: 170px 150px 170px;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {
+    // NOSOTROS
+    // NOSOTROS FLEX & STYLES
+    .nosotros{
+        .nosotros--text{
+            .nosotros--text--social{
+                display: flex;
+                justify-content: center;
+                
+            }
+        }
+        height: 750px;
+        .nosotros--img{
+            img{
+
+                width: 300px;
+                height: 400px;
+            }
+        }
+    }
+    // NOSOTROS GRID
+    .nosotros{
+        display: grid;
+        grid-template-columns: 300px;
+        grid-template-rows: 300px 450px;
+    }
+    // FORMULARIO FLEX & STYLES
+    .newsleter{
+        height: 410px;
+    }
+    // FORMULARIO GRID
+    .newsleter{
+        display: grid;
+        grid-template-columns: 300px;
+        grid-template-rows: 150px 300px;
+    }
+    // FOOTER GRID
+    footer{
+        display: grid;
+        grid-template-columns: 300px;
+        grid-template-rows: 170px 150px 150px;
+    }
+}

@@ -1,0 +1,276 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+// VARIABLES
+$primario: #363636;
+$secundario: #ba9979;
+$text: #ffffff;
+// VARIABLES TEXTO
+$titulo: 'Monserrat', sans-serif;
+$textinfo: 'Roboto', sans-serif;
+
+
+
+// NAVBAR
+.navbar{
+    .container-fluid{
+        .navbar-brand{
+            img{
+                width: 50px;
+            }
+        }
+        .collapse{
+            .navbar-nav{
+                .dropdown{
+                    .dropdown-menu{
+                        background: $secundario;
+                        .dropdown-item{
+                            color: $text;
+                        }
+                        .dropdown-item:hover{
+                            background: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// HEADER FLEX & STYLE
+.header{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: $secundario;
+    height: 600px;
+    color: $text;
+    .header--info{
+        h1{
+            font-family: $titulo;
+            font-weight: 700;
+        }
+        .header--info--cta{
+            a{
+                text-decoration: none;
+                background: #1c0b1b;
+                color: $text;
+                padding: 10px 45px;
+                border-radius: 5px;
+            }
+            a:hover{
+                text-decoration: none;
+                background: #977455;
+                color: $text;
+                padding: 10px 45px;
+                border-radius: 5px;
+            }
+        }
+    }
+    .img{
+        img{
+            width: 600px;
+        }
+    }
+}
+
+// HEADER GRID
+.header{
+    display: grid;
+    grid-template-columns: 600px;
+    grid-template-rows: 200px 200px;
+}
+
+// FORMULARIO FLEX & STYLES
+.newsleter{
+    display: flex;
+    justify-content: center;
+    padding-top: 45px;
+    height: 300px;
+    background: #1e101e;
+    color: $secundario;
+    .newsleter--form{
+        form{
+            display: flex;
+            flex-direction: column;
+            input{
+                background: none;
+                border: none;
+                margin-bottom: 15px;
+            }
+            input[type=text]:focus{
+                outline: none;
+                background: #ba9979;
+                color: $text;
+            }
+            input[type=email]:focus{
+                outline: none;
+                background: #ba9979;
+                color: $text;
+            }
+            input[type=submit]{
+                background: #ba9979;
+                color: $text;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+// FORMULARIO GRID
+.newsleter{
+    display: grid;
+    grid-template-columns: 500px 500px;
+    grid-template-rows: 300px;
+}
+
+// FOOTER
+// FOOTER FLEX & STYLES
+footer{
+    display: flex;
+    justify-content: center;
+    background: #363636;
+    .footer--item{
+        .footer--brand{
+            .footer--brand--img{
+                display: flex;
+                justify-content: center;
+                padding-bottom: 10px;
+                img{
+                    width: 50px;
+                }
+            }
+            .footer--brand--social{
+                ul{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    padding: 0;
+                    li{
+                        list-style: none;
+                        padding: 0;
+                        a{
+                            i{
+                                color: $secundario;
+                                font-size: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer--item--navegacion{
+            h4{
+                color: $text;
+            }
+            .sitio--list{
+                ul{
+                    list-style-type: none;
+                    padding: 0;
+                    li{
+                        list-style-type: none;
+                        a{
+                            text-decoration: none;
+                            color: $secundario;
+                        }
+                    }
+                }
+            }
+        }
+        .footer--item--contacto{
+            h4{
+                color: $text;
+            }
+            .contacto--list{
+                ul{
+                    list-style-type: none;
+                    padding: 0;
+                    li{
+                        list-style-type: none;
+                        padding: 0;
+                        a{
+                            text-decoration: none;
+                            color: $secundario;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// FOOTER GRID
+footer{
+    display: grid;
+    grid-template-columns: 300px 200px 300px;
+    grid-template-rows: 200px;
+}
+
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+    // HEADER FLEX & STYLE
+    .header{
+        height: 500px;
+        .img{
+            img{
+                width: 300px;
+            }
+        }
+    }
+    // HEADER GRID
+    .header{
+        display: grid;
+        grid-template-columns: 300px;
+        grid-template-rows: 300px 100px;
+    }
+    // FORMULARIO FLEX & STYLES
+    .newsleter{
+        height: 410px;
+    }
+    // FORMULARIO GRID
+    .newsleter{
+        display: grid;
+        grid-template-columns: 300px;
+        grid-template-rows: 150px 300px;
+    }
+    // FOOTER GRID
+    footer{
+        display: grid;
+        grid-template-columns: 300px;
+        grid-template-rows: 170px 150px 150px;
+    }
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {
+    // FORMULARIO FLEX & STYLES
+    .newsleter{
+        height: 410px;
+    }
+    // FORMULARIO GRID
+    .newsleter{
+        display: grid;
+        grid-template-columns: 300px;
+        grid-template-rows: 150px 300px;
+    }
+    // FOOTER GRID
+    footer{
+        display: grid;
+        grid-template-columns: 300px;
+        grid-template-rows: 170px 150px 150px;
+    }
+}
+
+// // Large devices (desktops, 992px and up)
+// @media (min-width: 992px) { ... }
+
+// // X-Large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) { ... }
+
+// // XX-Large devices (larger desktops, 1400px and up)
+// @media (min-width: 1400px) { ... }
